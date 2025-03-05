@@ -9,7 +9,6 @@ const OrderForm = () => {
         toAddress: '',
         weight: '',
         orderCollectedAt: '',
-        orderNumber: '',
     });
 
     const [successMessage, setSuccessMessage] = useState("");
@@ -31,7 +30,6 @@ const OrderForm = () => {
                 toAddress: '',
                 weight: '',
                 orderCollectedAt: '',
-                orderNumber: '',
             });
 
             setTimeout(() => setSuccessMessage(""), 3000);
