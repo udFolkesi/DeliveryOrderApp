@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "deliveryorderapp.client", "deliveryorderapp.client\deliveryorderapp.client.esproj", "{24E83557-3960-A80A-CEDD-8FE25CAC765B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryOrderApp.Server", "DeliveryOrderApp.Server\DeliveryOrderApp.Server.csproj", "{37E2D31A-4D7D-4874-B7D3-7BE4A56D8F9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24E83557-3960-A80A-CEDD-8FE25CAC765B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24E83557-3960-A80A-CEDD-8FE25CAC765B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24E83557-3960-A80A-CEDD-8FE25CAC765B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{24E83557-3960-A80A-CEDD-8FE25CAC765B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24E83557-3960-A80A-CEDD-8FE25CAC765B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24E83557-3960-A80A-CEDD-8FE25CAC765B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{37E2D31A-4D7D-4874-B7D3-7BE4A56D8F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E2D31A-4D7D-4874-B7D3-7BE4A56D8F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E2D31A-4D7D-4874-B7D3-7BE4A56D8F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E2D31A-4D7D-4874-B7D3-7BE4A56D8F9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CDD0F01-D489-4961-8165-8B0892BAF026}
+	EndGlobalSection
+EndGlobal
