@@ -5,8 +5,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DeliveryOrderApp.Server.Services
 {
-    public class OrderService(DeliveryOrderDbContext dbContext) : IOrderService
+    public class OrderService : IOrderService
     {
+        private readonly DeliveryOrderDbContext dbContext;
+        private readonly ILogger<OrderService> logger;
+
+        public OrderService(DeliveryOrderDbContext dbContext, ILogger<OrderService> logger)
+        {
+            this.dbContext = dbContext;
+            this.logger = logger;
+        }
+
         public async Task<Order> GetOrderAsync(int id)
         {
             return await dbContext.Orders.FindAsync(id);

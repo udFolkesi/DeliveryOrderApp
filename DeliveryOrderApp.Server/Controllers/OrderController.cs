@@ -1,10 +1,6 @@
-﻿using DeliveryOrderApp.Server.Data;
-using DeliveryOrderApp.Server.Models;
-using DeliveryOrderApp.Server.Services;
+﻿using DeliveryOrderApp.Server.Models;
 using DeliveryOrderApp.Server.Services.Abstractions;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace DeliveryOrderApp.Server.Controllers
 {
@@ -22,16 +18,30 @@ namespace DeliveryOrderApp.Server.Controllers
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Order>> GetOrder(int id)
         {
-            var order = await orderService.GetOrderAsync(id);
-            if (order == null) return NotFound();
-            return Ok(order);
+            var doctor = await orderService.GetOrderAsync(id);
+            if (doctor == null)
+            {
+                return NotFound();
+            }
+            return Ok(doctor);
         }
 
         [HttpPost]
         public async Task<ActionResult<Order>> CreateOrder(Order order)
         {
-            await orderService.CreateOrderAsync(order);
-            return CreatedAtAction(nameof(GetOrder), new { id = order.Id }, order);
+            try
+            {
+                await orderService.CreateOrderAsync(order);
+                return CreatedAtAction(nameof(GetOrder), new { id = order.Id }, order);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "Internal Server Error");
+            }
         }
     }
 }
