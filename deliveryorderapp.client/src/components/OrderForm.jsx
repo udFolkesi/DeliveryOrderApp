@@ -34,7 +34,7 @@ const OrderForm = () => {
 
             setTimeout(() => setSuccessMessage(""), 3000);
         } catch (error) {
-            console.error("Error during the order creating:", error);
+            console.error(error);
         }
     };
 

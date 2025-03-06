@@ -18,12 +18,12 @@ namespace DeliveryOrderApp.Server.Controllers
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Order>> GetOrder(int id)
         {
-            var doctor = await orderService.GetOrderAsync(id);
-            if (doctor == null)
+            var order = await orderService.GetOrderAsync(id);
+            if (order == null)
             {
                 return NotFound();
             }
-            return Ok(doctor);
+            return Ok(order);
         }
 
         [HttpPost]

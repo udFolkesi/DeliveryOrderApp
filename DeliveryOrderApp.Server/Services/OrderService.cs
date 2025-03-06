@@ -34,8 +34,9 @@ namespace DeliveryOrderApp.Server.Services
             }
 
             dbContext.Orders.Add(order);
-
             await dbContext.SaveChangesAsync();
+
+            logger.LogInformation($"Create order with Id {order.Id}");
         }
     }
 }

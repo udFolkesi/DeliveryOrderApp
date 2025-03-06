@@ -13,7 +13,7 @@ const OrderDetails = () => {
                 const data = await fetchOrderById(id);
                 setOrder(data);
             } catch (error) {
-                console.error("Error during the order loading", error);
+                console.error(error);
             }
         };
         loadOrder();
