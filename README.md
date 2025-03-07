@@ -1,2 +1,2 @@
 # DeliveryOrderApp
-В первую очередь необходимо запустить СУБД, далее - в DeliveryOrderApp.Server в файле appsettings.json заменить существующую ConnectionString на свою. После, через Package Manager Console внести изменения в БД через update-database (Важно, чтоб для консоли была выбран DeliveryOrderApp.Server). Готово! Можно запускать проект.
+В первую очередь необходимо запустить СУБД, далее - в DeliveryOrderApp.Server в файле appsettings.json заменить существующую ConnectionString на свою. Через Package Manager Console внести изменения в БД через update-database (Важно, чтоб для консоли был выбран DeliveryOrderApp.Server). Перед запуском проекта нужно убедиться, что в свойствах решения выбрано оба проекта для запуска. Теперь можно тестировать!
